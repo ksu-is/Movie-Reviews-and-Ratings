@@ -3,7 +3,7 @@
 ## Sprint 1
 
 - [x] Create Github Team & Repository
-- [ ] Find related repository and evaluate it (Each Member)
+- [x] Find related repository and evaluate it (Each Member)
 
 ## Sprint 2
 
