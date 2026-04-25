@@ -31,10 +31,11 @@ def login():
     
 def movie_page(username, movie):
     while True:
-        print(movie["title"])
-        print("Year: ", movie["year"])
-        print("Synopsis: ", movie["synopsis"])
-        print("Main cast:", movie["cast"])
+        # displays movie info
+        print(movie["Title"])
+        print("Year: ", movie["Year"])
+        print("Synopsis: ", movie["Synopsis"])
+        print("Main cast:", movie["Cast"])
 
         print("\nReviews:")
         if len(movie["reviews"]) == 0:
@@ -69,10 +70,9 @@ def browse_movies(username):
     while True:
         for items in range(len(movies)):
             #Get position of movies and its title
-            print(items + 1 + ". " + movies[items]["title"])
+            print(str(items + 1) + ". " + movies[items]["title"])
         
-        choice = input("\n1. Select movie"
-                       "2. Go back to main menu")
+        choice = input("\n1. Select movie\n2. Go back to main menu\n")
         
         if choice == "1":
             movie_name = input("Enter movie: ")
@@ -83,6 +83,9 @@ def browse_movies(username):
                     break
                 else: 
                     print("Movie not found")
+
+        elif choice == "2":
+            return
     
 def add_review(username, movie):
     review = input("Enter review: ")
