@@ -70,7 +70,6 @@ def main_menu(username):
         else:
             print("Invalid Choice")
         
-
 def movie_page(username, movie):
     while True:
         # displays movie info
@@ -142,6 +141,25 @@ def add_rating(movie):
         movie["ratings"].append(rating)
         print("Rating added")
 
+def view_profile(username):
+    print("PROFILE")
+    print("Username: " + username)
+    print("Reviews Made: ")
+    print("Ratings Made: ")
+
+    print("Reviews: ")
+    review_count = 0
+    if review_count == 0:
+        print("No Reviews Made")
+    else:
+        review_count = review_count + 1 
+    
+    print("Ratings: ")
+    ratings = 0
+    if ratings == 0:
+        print("No Ratings Made")
+    else:
+        ratings = ratings + 1 
 
        
 
