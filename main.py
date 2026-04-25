@@ -16,6 +16,31 @@ movies = [
         "Reviews": [],
         "Ratings": []
     },
+    {   
+        "Title": "...",
+        "Year": "...",
+        "Synopsis": "...",
+        "Cast": "...",
+        "Reviews": [],
+        "Ratings": []
+    }, 
+    {
+        "Title": "...",
+        "Year": "...",
+        "Synopsis": "...",
+        "Cast": "...",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "...",
+        "Year": "...",
+        "Synopsis": "...",
+        "Cast": "...",
+        "Reviews": [],
+        "Ratings": []
+    }
+
 ]
 
 def login():
