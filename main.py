@@ -28,7 +28,24 @@ def login():
         users.append(username)
         print("Welcome", username)
         return username
-    
+
+def main_menu(username):
+    while True:
+        print("1. Browse Movies")
+        print("2. View profile")
+        print("3. Exit")
+
+        choice = input("Slect a Menu option: ")
+        if choice == "1":
+            browse_movies(username)
+        elif choice == "2":
+            view_profile(username)
+        elif choice == "3":
+            print("Goodbye," + username + "!")
+        else:
+            print("Invalid Choice")
+        
+
 def movie_page(username, movie):
     while True:
         # displays movie info
