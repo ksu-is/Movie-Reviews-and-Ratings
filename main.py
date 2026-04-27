@@ -17,26 +17,26 @@ movies = [
         "Ratings": []
     },
     {   
-        "Title": "...",
-        "Year": "...",
-        "Synopsis": "...",
-        "Cast": "...",
+        "Title": "Better Days",
+        "Year": "2019",
+        "Synopsis": "Chen Nian who is being bullied at school and her relationship with a tough street kid, Jackson Yee, with whom she is implicated in the murder of a teenage girl.",
+        "Cast": "Zhou Dong Yu, Jackson Yee, Wei Lai",
         "Reviews": [],
         "Ratings": []
     }, 
     {
-        "Title": "...",
-        "Year": "...",
-        "Synopsis": "...",
-        "Cast": "...",
+        "Title": "Brave",
+        "Year": "2012",
+        "Synopsis": "Set in schotland in a rugged and mythical time, this movie features Princess Merida, and aspiring archer and impetuous daughter of Queen Elinor. Merida makes a reckless choice that unleashes unintended peril and forces her to spring into action to set things right.",
+        "Cast": "Kelly Macdonald, Billy Connolly, Emma Thompson",
         "Reviews": [],
         "Ratings": []
     },
     {
-        "Title": "...",
-        "Year": "...",
-        "Synopsis": "...",
-        "Cast": "...",
+        "Title": "Top Gun",
+        "Year": "1986",
+        "Synopsis": "The Top Gun Navel Fighter Weapons School is where the best of the best trains to refine their elite flying skills. When hotshot fighter pilot Maverick is sent to the school, his reckless attitude and cocky demeanor put him at odds with the other pilots, especially the cool and collected Iceman.",
+        "Cast": "Tom Cruise, Val Kilmer, Anthony Edwards, Kelly McGillis",
         "Reviews": [],
         "Ratings": []
     }
