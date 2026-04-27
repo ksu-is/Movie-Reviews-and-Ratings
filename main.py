@@ -101,7 +101,7 @@ def movie_page(username, movie):
 
         choice = input("\n1. Add review"
                         "\n2. Add rating"
-                        "\n3. Go back to movie list")
+                        "\n3. Go back to movie list\n")
         
         if choice == "1":
             add_review(username, movie)
@@ -120,7 +120,7 @@ def browse_movies(username):
             print(str(items + 1) + ". " + movies[items]["Title"])
         
         choice = input("\n1. Select movie"
-                       "\n2. Go back to main menu")
+                       "\n2. Go back to main menu\n")
         
         if choice == "1":
             movie_name = input("Enter movie: ")
