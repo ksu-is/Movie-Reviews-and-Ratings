@@ -159,18 +159,20 @@ def view_profile(username):
 
     print("Reviews: ")
     review_count = 0
-    if review_count == 0:
-        print("No Reviews Made")
-    else:
-        review_count = review_count + 1 
+    for review in movies["Reviews"]:
+        if username in review:
+            print(review)
+            review_count = review_count + 1 
+        else:
+            print("No Reviews Made")
     
     print("Ratings: ")
     ratings = 0
-    if ratings == 0:
-        print("No Ratings Made")
-    else:
-        ratings = ratings + 1 
-
+    for ratings in movies["Ratings"]:
+        ratings = ratings + 1
+        if ratings == 0:
+            print("No Ratings Made")
+            
 def main():
     username = login()
     main_menu(username)
