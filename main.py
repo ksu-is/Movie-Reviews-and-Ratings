@@ -28,7 +28,7 @@ movies = [
     {
         "Title": "Brave",
         "Year": "2012",
-        "Synopsis": "Set in schotland in a rugged and mythical time, this movie features Princess Merida, and aspiring archer and impetuous daughter of Queen Elinor. Merida makes a reckless choice that unleashes unintended peril and forces her to spring into action to set things right.",
+        "Synopsis": "Set in Scotland in a rugged and mythical time, this movie features Princess Merida, and aspiring archer and impetuous daughter of Queen Elinor. Merida makes a reckless choice that unleashes unintended peril and forces her to spring into action to set things right.",
         "Cast": "Kelly Macdonald, Billy Connolly, Emma Thompson",
         "Reviews": [],
         "Ratings": []
@@ -36,7 +36,7 @@ movies = [
     {
         "Title": "Top Gun",
         "Year": "1986",
-        "Synopsis": "The Top Gun Navel Fighter Weapons School is where the best of the best trains to refine their elite flying skills. When hotshot fighter pilot Maverick is sent to the school, his reckless attitude and cocky demeanor put him at odds with the other pilots, especially the cool and collected Iceman.",
+        "Synopsis": "The Top Gun Naval Fighter Weapons School is where the best of the best trains to refine their elite flying skills. When hotshot fighter pilot Maverick is sent to the school, his reckless attitude and cocky demeanor put him at odds with the other pilots, especially the cool and collected Iceman.",
         "Cast": "Tom Cruise, Val Kilmer, Anthony Edwards, Kelly McGillis",
         "Reviews": [],
         "Ratings": []
@@ -54,7 +54,7 @@ def login():
     else:
         users.append(username)
         print("Welcome", username)
-        return username
+    return username
 
 # Main menu page
 def main_menu(username):
@@ -64,15 +64,15 @@ def main_menu(username):
         print("2. View profile")
         print("3. Exit")
 
-        choice = input("Slect a Menu option: ") #user's input of choice they want to interact with
-        if choice == "1": #shows the user the movie list
+        choice = input("Select a Menu option: ")
+        if choice == "1":
             browse_movies(username)
         elif choice == "2": #shows the user their profile consisting of their username, and reviews and ratings they've made
             view_profile(username)
         elif choice == "3": #when users are done, they can choose to exit
             print("Goodbye," + username + "!")
-        else: 
-            print("Invalid Choice") #displays if user inputs outside of the available menu options
+        else:
+            print("Invalid Choice") #Display when users input non available menu options
         
 # Display movie page and information such as reviews and ratings
 def movie_page(username, movie):
@@ -84,7 +84,7 @@ def movie_page(username, movie):
         print("Main cast:", movie["Cast"])
 
         print("\nReviews:")
-        if len(movie["reviews"]) == 0:
+        if len(movie["Reviews"]) == 0:
             print("No reviews made")
         else:
             for review in movie["Reviews"]:
@@ -95,13 +95,13 @@ def movie_page(username, movie):
             print("No ratings made")
         else:
             # calculates average rating
-            rating_avg = sum(movie["ratings"]) / len(movie["ratings"])
+            rating_avg = sum(movie["Ratings"]) / len(movie["Ratings"])
             #shows average rating of movie and number of ratings made
-            print("Average rating: " + str(round(rating_avg, 1)) + "/5 (" + str(len(movie["ratings"])) + " rating made)")
+            print("Average rating: " + str(round(rating_avg, 1)) + "/5 (" + str(len(movie["Ratings"])) + " ratings made)")
 
         choice = input("\n1. Add review"
                         "\n2. Add rating"
-                        "\n3. Go back to movie list")
+                        "\n3. Go back to movie list\n")
         
         if choice == "1":
             add_review(username, movie)
@@ -120,7 +120,7 @@ def browse_movies(username):
             print(str(items + 1) + ". " + movies[items]["Title"])
         
         choice = input("\n1. Select movie"
-                       "\n2. Go back to main menu")
+                       "\n2. Go back to main menu\n")
         
         if choice == "1":
             movie_name = input("Enter movie: ")
@@ -139,7 +139,7 @@ def browse_movies(username):
 def add_review(username, movie):
     review = input("Enter review: ")
     if review != "":
-        movie["reviews"].append(username + ": " + review)
+        movie["Reviews"].append(username + ": " + review)
         print("Review added")
 
 # Allows users to add a rating
@@ -147,7 +147,7 @@ def add_rating(movie):
     rating = input("Enter rating (1-5): ")
     if rating.isdigit():
         rating = int(rating)
-        movie["ratings"].append(rating)
+        movie["Ratings"].append(rating)
         print("Rating added")
 
 # Allows users to interact with profile page
@@ -171,7 +171,7 @@ def view_profile(username): #display the user's profile
     for ratings in movies["Ratings"]: #loops through the ratings in the movie area
         ratings = ratings + 1 # adds a rating count for every rating the user has made
         if ratings == 0:
-            print("No Ratings Made") #present this message if user made no ratings
+            print("No Ratings Made") #displays if user's has made no ratings
             
        
 
