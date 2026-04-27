@@ -58,20 +58,21 @@ def login():
 
 # Main menu page
 def main_menu(username):
-    while True:
+    while True: #loops until user chooses to exit
+        #display menu options
         print("1. Browse Movies")
         print("2. View profile")
         print("3. Exit")
 
-        choice = input("Slect a Menu option: ")
-        if choice == "1":
+        choice = input("Slect a Menu option: ") #user's input of choice they want to interact with
+        if choice == "1": #shows the user the movie list
             browse_movies(username)
-        elif choice == "2":
+        elif choice == "2": #shows the user their profile consisting of their username, and reviews and ratings they've made
             view_profile(username)
-        elif choice == "3":
+        elif choice == "3": #when users are done, they can choose to exit
             print("Goodbye," + username + "!")
-        else:
-            print("Invalid Choice")
+        else: 
+            print("Invalid Choice") #displays if user inputs outside of the available menu options
         
 # Display movie page and information such as reviews and ratings
 def movie_page(username, movie):
@@ -150,7 +151,7 @@ def add_rating(movie):
         print("Rating added")
 
 # Allows users to interact with profile page
-def view_profile(username):
+def view_profile(username): #display the user's profile
     print("PROFILE")
     print("Username: " + username)
     print("Reviews Made: ")
@@ -158,19 +159,19 @@ def view_profile(username):
 
     print("Reviews: ")
     review_count = 0
-    for review in movies["Reviews"]:
+    for review in movies["Reviews"]: #loops through the reviews in the movie area
         if username in review:
             print(review)
-            review_count = review_count + 1 
+            review_count = review_count + 1 #adds a review count for every review present 
         else:
-            print("No Reviews Made")
+            print("No Reviews Made") #if no reviews are present for this user, will print this message
     
     print("Ratings: ")
     ratings = 0
-    for ratings in movies["Ratings"]:
-        ratings = ratings + 1
+    for ratings in movies["Ratings"]: #loops through the ratings in the movie area
+        ratings = ratings + 1 # adds a rating count for every rating the user has made
         if ratings == 0:
-            print("No Ratings Made")
+            print("No Ratings Made") #present this message if user made no ratings
             
        
 
