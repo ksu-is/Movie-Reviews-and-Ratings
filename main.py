@@ -1,3 +1,4 @@
+#Setting up structure with empty list and list of movies
 users = []
 movies = [
     {
@@ -43,17 +44,19 @@ movies = [
 
 ]
 
+# login system - adds new users and checks existing users
 def login():
     print("Welcome to MRR!")
     username = input("Enter username: ")
 
     if username in users:
-        print("User already exists")
+        print("Welcome back", username)
     else:
         users.append(username)
         print("Welcome", username)
         return username
 
+# Main menu page
 def main_menu(username):
     while True:
         print("1. Browse Movies")
@@ -70,6 +73,7 @@ def main_menu(username):
         else:
             print("Invalid Choice")
         
+# Display movie page and information such as reviews and ratings
 def movie_page(username, movie):
     while True:
         # displays movie info
@@ -82,11 +86,11 @@ def movie_page(username, movie):
         if len(movie["reviews"]) == 0:
             print("No reviews made")
         else:
-            for review in movie["reviews"]:
+            for review in movie["Reviews"]:
                 print(review)
 
         print("\nRatings:")
-        if len(movie["rating"]) == 0:
+        if len(movie["Ratings"]) == 0:
             print("No ratings made")
         else:
             # calculates average rating
@@ -95,8 +99,8 @@ def movie_page(username, movie):
             print("Average rating: " + str(round(rating_avg, 1)) + "/5 (" + str(len(movie["ratings"])) + " rating made)")
 
         choice = input("\n1. Add review"
-                            "2. Add rating"
-                            "3. Go back to movie list")
+                        "\n2. Add rating"
+                        "\n3. Go back to movie list")
         
         if choice == "1":
             add_review(username, movie)
@@ -107,18 +111,20 @@ def movie_page(username, movie):
         elif choice == "3":
             return
 
+# Allows users to browse and select a movie
 def browse_movies(username):
     while True:
         for items in range(len(movies)):
             #Get position of movies and its title
-            print(str(items + 1) + ". " + movies[items]["title"])
+            print(str(items + 1) + ". " + movies[items]["Title"])
         
-        choice = input("\n1. Select movie\n2. Go back to main menu\n")
+        choice = input("\n1. Select movie"
+                       "\n2. Go back to main menu")
         
         if choice == "1":
             movie_name = input("Enter movie: ")
             for movie in movies:
-                if movie["title"].lower() == movie_name.lower():
+                if movie["Title"].lower() == movie_name.lower():
                     # displays movie info
                     movie_page(username, movie)
                     break
@@ -128,12 +134,14 @@ def browse_movies(username):
         elif choice == "2":
             return
     
+# Allows users to add a review
 def add_review(username, movie):
     review = input("Enter review: ")
     if review != "":
         movie["reviews"].append(username + ": " + review)
         print("Review added")
 
+# Allows users to add a rating
 def add_rating(movie):
     rating = input("Enter rating (1-5): ")
     if rating.isdigit():
@@ -141,6 +149,7 @@ def add_rating(movie):
         movie["ratings"].append(rating)
         print("Rating added")
 
+# Allows users to interact with profile page
 def view_profile(username):
     print("PROFILE")
     print("Username: " + username)
