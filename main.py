@@ -2,18 +2,18 @@
 users = []
 movies = [
     {
-        "Title": "...",
-        "Year": "...",
-        "Synopsis": "...",
-        "Cast": "...",
+        "Title": "The Others",
+        "Year": "2001",
+        "Synopsis": "A mother and her children experience paranormal activities in the house they reside in, stirring confusion among them and their servants.",
+        "Cast": "Nicole Kidman, Fionnula Flanagan, Christopher Eccleston, James Bentley, Elaine Cassidy, Alakina Mann, Eric Sykes",
         "Reviews": [],
         "Ratings": []
     },
     {
-        "Title": "...",
-        "Year": "...",
-        "Synopsis": "...",
-        "Cast": "...",
+        "Title": "Peter Rabbit",
+        "Year": "2018",
+        "Synopsis": "Peter Rabbit and his sisters comes in contact with Mr. McGregor's relative and they don't see eye to eye, leading to a battle of wills.",
+        "Cast": "James Corden, Domhnall Gleeson, Rose Byrne, Margot Robbie, Daisy Ridley, Elizabeth Debicki",
         "Reviews": [],
         "Ratings": []
     },
