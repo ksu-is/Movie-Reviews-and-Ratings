@@ -11,7 +11,8 @@
 - [x] Create a plan
 - [x] Create a draft
 - [x] Commit messages (6 comments from each member)
-- [ ] test run code
+- [x] Test run code
+- [x] Fix and make edits
 
 ## Sprint 3
 
