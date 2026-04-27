@@ -28,7 +28,7 @@ movies = [
     {
         "Title": "Brave",
         "Year": "2012",
-        "Synopsis": "Set in schotland in a rugged and mythical time, this movie features Princess Merida, and aspiring archer and impetuous daughter of Queen Elinor. Merida makes a reckless choice that unleashes unintended peril and forces her to spring into action to set things right.",
+        "Synopsis": "Set in Scotland in a rugged and mythical time, this movie features Princess Merida, and aspiring archer and impetuous daughter of Queen Elinor. Merida makes a reckless choice that unleashes unintended peril and forces her to spring into action to set things right.",
         "Cast": "Kelly Macdonald, Billy Connolly, Emma Thompson",
         "Reviews": [],
         "Ratings": []
@@ -36,7 +36,7 @@ movies = [
     {
         "Title": "Top Gun",
         "Year": "1986",
-        "Synopsis": "The Top Gun Navel Fighter Weapons School is where the best of the best trains to refine their elite flying skills. When hotshot fighter pilot Maverick is sent to the school, his reckless attitude and cocky demeanor put him at odds with the other pilots, especially the cool and collected Iceman.",
+        "Synopsis": "The Top Gun Naval Fighter Weapons School is where the best of the best trains to refine their elite flying skills. When hotshot fighter pilot Maverick is sent to the school, his reckless attitude and cocky demeanor put him at odds with the other pilots, especially the cool and collected Iceman.",
         "Cast": "Tom Cruise, Val Kilmer, Anthony Edwards, Kelly McGillis",
         "Reviews": [],
         "Ratings": []
@@ -54,7 +54,7 @@ def login():
     else:
         users.append(username)
         print("Welcome", username)
-        return username
+    return username
 
 # Main menu page
 def main_menu(username):
@@ -63,13 +63,14 @@ def main_menu(username):
         print("2. View profile")
         print("3. Exit")
 
-        choice = input("Slect a Menu option: ")
+        choice = input("Select a Menu option: ")
         if choice == "1":
             browse_movies(username)
         elif choice == "2":
             view_profile(username)
         elif choice == "3":
             print("Goodbye," + username + "!")
+            break
         else:
             print("Invalid Choice")
         
@@ -83,7 +84,7 @@ def movie_page(username, movie):
         print("Main cast:", movie["Cast"])
 
         print("\nReviews:")
-        if len(movie["reviews"]) == 0:
+        if len(movie["Reviews"]) == 0:
             print("No reviews made")
         else:
             for review in movie["Reviews"]:
@@ -94,9 +95,9 @@ def movie_page(username, movie):
             print("No ratings made")
         else:
             # calculates average rating
-            rating_avg = sum(movie["ratings"]) / len(movie["ratings"])
+            rating_avg = sum(movie["Ratings"]) / len(movie["Ratings"])
             #shows average rating of movie and number of ratings made
-            print("Average rating: " + str(round(rating_avg, 1)) + "/5 (" + str(len(movie["ratings"])) + " rating made)")
+            print("Average rating: " + str(round(rating_avg, 1)) + "/5 (" + str(len(movie["Ratings"])) + " ratings made)")
 
         choice = input("\n1. Add review"
                         "\n2. Add rating"
@@ -138,7 +139,7 @@ def browse_movies(username):
 def add_review(username, movie):
     review = input("Enter review: ")
     if review != "":
-        movie["reviews"].append(username + ": " + review)
+        movie["Reviews"].append(username + ": " + review)
         print("Review added")
 
 # Allows users to add a rating
@@ -146,7 +147,7 @@ def add_rating(movie):
     rating = input("Enter rating (1-5): ")
     if rating.isdigit():
         rating = int(rating)
-        movie["ratings"].append(rating)
+        movie["Ratings"].append(rating)
         print("Rating added")
 
 # Allows users to interact with profile page
@@ -169,6 +170,12 @@ def view_profile(username):
         print("No Ratings Made")
     else:
         ratings = ratings + 1 
+
+def main():
+    username = login()
+    main_menu(username)
+
+main()
 
        
 
