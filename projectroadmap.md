@@ -8,6 +8,8 @@
 ## Sprint 2
 
 - [ ] Test run explored repository (Each Member)
+- [ ] Create a plan
+- [ ] Create a draft
 - [ ] Commit messages (6 comments from each member)
 
 ## Sprint 3
