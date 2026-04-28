@@ -16,4 +16,5 @@
 
 ## Sprint 3
 
+- [x] Schedule Final Presentation 
 - [ ] Creat one PowerPoint slide introducing the project and upload it (upload: Both Member)
