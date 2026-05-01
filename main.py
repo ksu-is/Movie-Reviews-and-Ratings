@@ -64,6 +64,22 @@ movies = [
         "Cast": "Tom Cruise, Val Kilmer, Anthony Edwards, Kelly McGillis",
         "Reviews": [],
         "Ratings": []
+    },
+    {
+        "Title": "The Sound of Music",
+        "Year": "1965",
+        "Synopsis": "Maria, a young novice from an Abby, is sent to become the governess to the seven children of a widowed navel captain. Maria proves to be unlike the governess the Captaina and the children have had before. ",
+        "Cast": "Julie Ansdrews, Christopher Plummer",
+        "Reviews": [],
+        "Rating": []
+    },
+    {
+        "Title": "Barbie 12 Dancing Princesses",
+        "Year": "2006",
+        "Synopsis": "A king to 12 daughters worries about their unfit character for royal duties due to the words of a visitor and calls upon his cousin, Dutchess Rowena, to aid in teaching the girls their duties and sharpening their behavior. Instead, Her arrival brings an oppressive new order, while the king grows increasingly ill. Seeking freedom, the princess discover a hidden world using their mother's last gift to them.",
+        "Cast": "Kelly Sheridan, Catherine O'Hara, Shawn Macdonald, ",
+        "Reviews": [],
+        "Ratings": []
     }
 
 ]
