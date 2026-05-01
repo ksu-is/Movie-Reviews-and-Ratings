@@ -17,6 +17,30 @@ movies = [
         "Reviews": [],
         "Ratings": []
     },
+    {
+        "Title": "Us",
+        "Year": "2019",
+        "Synopsis": "Being back at her childhood home for vacation with her family, Adelaide Wilson can't help but feel concerned about something related to her traumatic past.",
+        "Cast": "Lupita Nyong'o, Winston Duke, Evan Alex, Shahadi Wright Joseph",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "Send Help",
+        "Year": "2026",
+        "Synopsis": "Linda Liddle is a survival enthusiast who got deserted on an island with her boss, Bradley Preston, whome she has conflicts with.",
+        "Cast": "Rachel McAdams, Dylan O'Brien",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "Ready or Not",
+        "Year": "2019",
+        "Synopsis": "Grace just got married to Alex Le Domas. She was introduced to the family's tradition where the new spouse must draw a card that would determine what game they'd play that night. Upon everyone's shock, Grace drew the Hide and Seek card.",
+        "Cast": "Samara Weaving, Adam Brody, Mark O'Brien",
+        "Reviews": [],
+        "Ratings": []
+    },
     {   
         "Title": "Better Days",
         "Year": "2019",
