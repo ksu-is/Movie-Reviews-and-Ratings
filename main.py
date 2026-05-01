@@ -44,7 +44,7 @@ movies = [
     {   
         "Title": "Better Days",
         "Year": "2019",
-        "Synopsis": "Chen Nian who is being bullied at school and her relationship with a tough street kid, Jackson Yee, with whom she is implicated in the murder of a teenage girl.",
+        "Synopsis": "Chen Nian who is being bullied at school and her relationship with a tough street kid, Xiao Bei, with whom she is implicated in the murder of a teenage girl.",
         "Cast": "Zhou Dong Yu, Jackson Yee, Wei Lai",
         "Reviews": [],
         "Ratings": []
@@ -68,7 +68,7 @@ movies = [
     {
         "Title": "The Sound of Music",
         "Year": "1965",
-        "Synopsis": "Maria, a young novice from an Abby, is sent to become the governess to the seven children of a widowed navel captain. Maria proves to be unlike the governess the Captaina and the children have had before. ",
+        "Synopsis": "Maria, a young novice from an Abby, is sent to become the governess to the seven children of a widowed navel captain. Maria proves to be unlike the governess the Captaina and the children have had before.",
         "Cast": "Julie Ansdrews, Christopher Plummer",
         "Reviews": [],
         "Rating": []
@@ -78,6 +78,46 @@ movies = [
         "Year": "2006",
         "Synopsis": "A king to 12 daughters worries about their unfit character for royal duties due to the words of a visitor and calls upon his cousin, Dutchess Rowena, to aid in teaching the girls their duties and sharpening their behavior. Instead, Her arrival brings an oppressive new order, while the king grows increasingly ill. Seeking freedom, the princess discover a hidden world using their mother's last gift to them.",
         "Cast": "Kelly Sheridan, Catherine O'Hara, Shawn Macdonald, ",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "The Forbidden Kingdom",
+        "Year": "2008",
+        "Synopsis": "When a magical staff transport Jason to ancient China, he is tasked with returning the staff to the Monkey King told by the prophecy.",
+        "Cast": "Jackie Chan, Jet Li, Michael Angarano",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "The Sixth Sense",
+        "Year": "1999",
+        "Synopsis": "Malcolm Crowe takes on a new case that reflect similar symptoms of a previous patient whom he was shot by. In helping his new patient, Cole Sear, a shocking discovery is amde.",
+        "Cast": "Bruce Willis, Haley Joel Osment",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "The Hobbit",
+        "Year": "2012",
+        "Synopsis": "Biblo, upon being chosen by Gandalf for him and the dwarves quest, initially refuses but soon joins them in their quest in reclaiming the dwarves land from the dragon Smaug, playing the role of the burglar in their quest due to a hobbit's stealth ability and scent which are unfamiliar to Smaug.",
+        "Cast": "Martin Freeman, Ian Mckellen, Richard Armitage"
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "Up",
+        "Year": "2009",
+        "Synopsis": "Faced with his house about to be taken down, Carl decides to fulfill a dream him and his late wife made when they were kids by lifting off with thousands of balloons, marking the start of his journey.",
+        "Cast": "Edward Asner, Jordan Nagai",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "Nanny McPhee",
+        "Year": "2005",
+        "Synopsis": "After the children of Cedric Brown runs off another nanny, he seeks out a new nenny for his children. A voice tells him the nanny he needs is Nanny McPhee. Upon meeting Nanny McPhee, the childrens are met with a nanny unlike the others they've been able to run off. Nanny McPhee proves to be a challange for the children, especially Simon.",
+        "Cast": "Emma Thompson, Colin Firth, Thomas brodi-Sangstere",
         "Reviews": [],
         "Ratings": []
     }
