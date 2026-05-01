@@ -16,5 +16,7 @@
 
 ## Sprint 3
 
-- [x] Schedule Final Presentation 
+- [x] Schedule Final Presentation
+- [x] Continue to edit/fix and test run
+- [x] Have a finished working code
 - [ ] Creat one PowerPoint slide introducing the project and upload it (upload: Both Member)
