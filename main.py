@@ -216,13 +216,17 @@ def movie_page(username, movie):
             print("No ratings made")
         else:
             # calculates average rating
-            rating_avg = sum(movie["Ratings"]) / len(movie["Ratings"])
+            total_rating = 0
+            for ratings in movie["Ratings"]:
+                total_rating = total_rating + ratings["Ratings"]
+            rating_avg = total_rating / len(movie["Ratings"])
             #shows average rating of movie and number of ratings made
             print("Average rating: " + str(round(rating_avg, 1)) + "/5 (" + str(len(movie["Ratings"])) + " ratings made)")
 
         choice = input("\n1. Add review"
                         "\n2. Add rating"
-                        "\n3. Go back to movie list: ")
+                        "\n3. Go back to movie list"
+                        "\nSelect An Option: ")
         
         if choice == "1":
             add_review(username, movie)
@@ -243,8 +247,9 @@ def browse_movies(username):
         
         choice = input("\nOptions:"
                        "\n1. Select movie"
-                       "\n2. Go back to main menu: ")
-        
+                       "\n2. Go back to main menu"
+                       "\nSelect An Option: ")
+                    
         if choice == "1":
             movie_name = input("Enter movie: ")
             for movie in movies:
@@ -270,8 +275,13 @@ def add_rating(username, movie):
     rating = input("Enter rating (1-5): ")
     if rating.isdigit():
         rating = int(rating)
-        movie["Ratings"].append(username + " | " + movie["Title"] + ": " + str(rating))
-        print("Rating added")
+        if 1 <= rating <= 5:
+            rating_data = {}
+            rating_data["user"] = username
+            rating_data["movie"] = movie["Title"]
+            rating_data["Ratings"] = rating
+            movie["Ratings"].append(rating_data)
+            print("Rating added")
 
 # Allows users to interact with profile page
 def view_profile(username): #display the user's profile
@@ -293,8 +303,8 @@ def view_profile(username): #display the user's profile
     rating_count = 0
     for movie in movies: 
         for rating in movie["Ratings"]:
-            if username in rating:
-                print(rating)
+            if rating["user"] == username:
+                print(rating["movie"] + ": " + str(rating["Ratings"]))
                 rating_count = rating_count + 1
     if rating_count == 0:
         print("No Ratings Made")
