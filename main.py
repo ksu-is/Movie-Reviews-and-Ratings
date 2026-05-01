@@ -84,7 +84,7 @@ def login():
 def main_menu(username):
     while True: #loops until user chooses to exit
         #display menu options
-        print("1. Browse Movies")
+        print("\n1. Browse Movies")
         print("2. View profile")
         print("3. Exit")
 
@@ -126,7 +126,7 @@ def movie_page(username, movie):
 
         choice = input("\n1. Add review"
                         "\n2. Add rating"
-                        "\n3. Go back to movie list\n")
+                        "\n3. Go back to movie list: ")
         
         if choice == "1":
             add_review(username, movie)
