@@ -111,7 +111,7 @@ movies = [
         "Synopsis": "Maria, a young novice from an Abby, is sent to become the governess to the seven children of a widowed navel captain. Maria proves to be unlike the governess the Captaina and the children have had before.",
         "Cast": "Julie Ansdrews, Christopher Plummer",
         "Reviews": [],
-        "Rating": []
+        "Ratings": []
     },
     {
         "Title": "Barbie 12 Dancing Princesses",
@@ -141,7 +141,7 @@ movies = [
         "Title": "The Hobbit",
         "Year": "2012",
         "Synopsis": "Biblo, upon being chosen by Gandalf for him and the dwarves quest, initially refuses but soon joins them in their quest in reclaiming the dwarves land from the dragon Smaug, playing the role of the burglar in their quest due to a hobbit's stealth ability and scent which are unfamiliar to Smaug.",
-        "Cast": "Martin Freeman, Ian Mckellen, Richard Armitage"
+        "Cast": "Martin Freeman, Ian Mckellen, Richard Armitage",
         "Reviews": [],
         "Ratings": []
     },
@@ -228,7 +228,7 @@ def movie_page(username, movie):
             add_review(username, movie)
 
         elif choice == "2":
-            add_rating(movie)
+            add_rating(username, movie)
 
         elif choice == "3":
             return
@@ -262,39 +262,42 @@ def browse_movies(username):
 def add_review(username, movie):
     review = input("Enter review: ")
     if review != "":
-        movie["Reviews"].append(username + ": " + review)
+        movie["Reviews"].append(username + " | " + movie["Title"] + ": " + review)
         print("Review added")
 
 # Allows users to add a rating
-def add_rating(movie):
+def add_rating(username, movie):
     rating = input("Enter rating (1-5): ")
     if rating.isdigit():
         rating = int(rating)
-        movie["Ratings"].append(rating)
+        movie["Ratings"].append(username + " | " + movie["Title"] + ": " + str(rating))
         print("Rating added")
 
 # Allows users to interact with profile page
 def view_profile(username): #display the user's profile
-    print("PROFILE")
+    print("\nPROFILE")
     print("Username: " + username)
-    print("Reviews Made: ")
-    print("Ratings Made: ")
 
-    print("Reviews: ")
+    print("\nReviews: ")
     review_count = 0
-    for review in movies["Reviews"]: #loops through the reviews in the movie area
-        if username in review:
-            print(review)
-            review_count = review_count + 1 #adds a review count for every review present 
-        else:
-            print("No Reviews Made") #if no reviews are present for this user, will print this message
-    
-    print("Ratings: ")
-    ratings = 0
-    for ratings in movies["Ratings"]: #loops through the ratings in the movie area
-        ratings = ratings + 1 # adds a rating count for every rating the user has made
-        if ratings == 0:
-            print("No Ratings Made") #displays if user's has made no ratings
+    for movie in movies: #loops through each movie
+        for review in movie["Reviews"]: #loops through the reviews in the movie area
+            if username in review:
+                print(review)
+                review_count = review_count + 1 #adds a review count for every review the user has made 
+    #print message if no reviews were found
+    if review_count == 0:
+        print("No Reviews Made") 
+    #for ratings
+    print("\nRatings: ")
+    rating_count = 0
+    for movie in movies: 
+        for rating in movie["Ratings"]:
+            if username in rating:
+                print(rating)
+                rating_count = rating_count + 1
+    if rating_count == 0:
+        print("No Ratings Made")
             
 def main():
     main_menu(login())
