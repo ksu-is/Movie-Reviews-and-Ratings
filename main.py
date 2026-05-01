@@ -77,7 +77,7 @@ def login():
         print("Welcome back", username)
     else:
         users.append(username)
-        print("Welcome", username)
+        print("\nWelcome", username)
     return username
 
 # Main menu page
@@ -95,6 +95,7 @@ def main_menu(username):
             view_profile(username)
         elif choice == "3": #when users are done, they can choose to exit
             print("Goodbye," + username + "!")
+            break
         else:
             print("Invalid Choice") #Display when users input non available menu options
         
@@ -139,12 +140,14 @@ def movie_page(username, movie):
 # Allows users to browse and select a movie
 def browse_movies(username):
     while True:
+        print("\n")
         for items in range(len(movies)):
             #Get position of movies and its title
             print(str(items + 1) + ". " + movies[items]["Title"])
         
-        choice = input("\n1. Select movie"
-                       "\n2. Go back to main menu\n")
+        choice = input("\nOptions:"
+                       "\n1. Select movie"
+                       "\n2. Go back to main menu: ")
         
         if choice == "1":
             movie_name = input("Enter movie: ")
@@ -153,8 +156,8 @@ def browse_movies(username):
                     # displays movie info
                     movie_page(username, movie)
                     break
-                else: 
-                    print("Movie not found")
+            else: 
+                print("Movie not found")
 
         elif choice == "2":
             return
@@ -197,6 +200,10 @@ def view_profile(username): #display the user's profile
         if ratings == 0:
             print("No Ratings Made") #displays if user's has made no ratings
             
+def main():
+    main_menu(login())
+
+main()
        
 
 
