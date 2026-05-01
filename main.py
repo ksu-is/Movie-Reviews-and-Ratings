@@ -41,6 +41,46 @@ movies = [
         "Reviews": [],
         "Ratings": []
     },
+    {
+        "Title": "The Hunger Games",
+        "Year": "2012",
+        "Synopsis": "Set in Panem where the 12 districts are forced to send tributes consisting of one boy and girl during the reaping, Primrose Everdeen's name was called, leading Katniss Everdeen to volunteer in place of her sister.",
+        "Cast": "Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "The Conjuring",
+        "Year": "2013",
+        "Synopsis": "The Perrons and their daughters moved into a house where they later experience paranormal activities, summoning Ed and Lorraine Warren to investigate.",
+        "Cast": "Vera Farmiga, Patrick Wilson, Ron Livingston, Lili Taylor",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "I Am What I Am",
+        "Year": "2021",
+        "Synopsis": "Follows the journey of a young boy as he navigates through setbacks and his passion for traditional lion dancing.",
+        "Cast": "Li Xun, Chen Yexiong, Guo Hao",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "Despicable Me",
+        "Year": "2010",
+        "Synopsis": "Gru and his army of minions sets up a plan to steal the moon. As he brought in three orphan girls to help with his scheme, his bond with them turned into something more than what he had in mind.",
+        "Cast": "Steve Carell, Miranda Cosgrove, Dana Gaier, Elsie Fisher, Jason Segel",
+        "Reviews": [],
+        "Ratings": []
+    },
+    {
+        "Title": "The Road",
+        "Year": "2009",
+        "Synopsis": "A man and his son journeys through a post-apocalyptic world, doing their best to survive as they scavenge for food and necessities while trying to avoid desperate predators.",
+        "Cast": "Viggo Mortensen, Kodi Smit-McPhee",
+        "Reviews": [],
+        "Ratings": []
+    },
     {   
         "Title": "Better Days",
         "Year": "2019",
